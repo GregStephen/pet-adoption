@@ -1,3 +1,85 @@
 body {
     background-color: azure;
-};
+}
+
+.container {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-content: space-around;
+}
+
+.petCard {
+    position: relative;
+    width: 80%;
+    margin: 1em;
+    text-align: center;
+    border-radius: 1%;
+    box-shadow: 2px 2px 20px grey;
+}
+
+.petName {
+    background-color: grey;
+    height: 1.3em;
+    width:100%;
+    margin-top: 0;
+}
+
+.petImage {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px black solid;
+    border-radius: 3.5%;
+}
+
+.petSkill {
+    padding-bottom: 1em;
+}
+
+.dogType {
+    position: absolute;
+    color: darkolivegreen;
+    background-color: lightgreen;
+    margin-bottom: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.catType {
+    position: absolute;
+    color: darkblue;
+    background-color: lightblue;
+    margin-bottom: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.dinoType {
+    position: absolute;
+    color: darkgoldenrod;
+    background-color: yellow;
+    margin-bottom: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        justify-content: space-around;
+    }
+    .petCard {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        justify-content: space-around;
+    }
+    .petCard {
+        width: 25%;
+    }
+}
