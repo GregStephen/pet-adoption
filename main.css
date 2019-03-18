@@ -2,6 +2,39 @@ body {
     background-color: azure;
 }
 
+.btnDiv {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+    align-content: center;
+}
+
+button {
+    margin: 3em 1em;
+    border-radius: 15%;
+    color: white;
+    height: 2.5em;
+    width: 5em;
+    cursor: pointer;
+}
+
+#catBtn {
+    background-color: lightblue;
+}
+
+#dogBtn {
+    background-color: lightgreen;
+
+}
+
+#dinoBtn {
+    background-color: orange;
+}
+
+#allPetsBtn {
+    background-color: red;
+}
+
 .container {
     display: flex;
     flex-flow: wrap row;
@@ -48,7 +81,7 @@ body {
 
 .catType {
     position: absolute;
-    color: darkblue;
+    color: rgb(76, 76, 221);
     background-color: lightblue;
     margin-bottom: 0;
     width: 100%;
@@ -57,8 +90,8 @@ body {
 
 .dinoType {
     position: absolute;
-    color: darkgoldenrod;
-    background-color: yellow;
+    color: orange;
+    background-color: rgb(247, 217, 162);
     margin-bottom: 0;
     width: 100%;
     bottom: 0;
