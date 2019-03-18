@@ -211,39 +211,65 @@ const pets = [
     }
   ];
 
+const catBtn = document.getElementById("catBtn");
+const dogBtn = document.getElementById("dogBtn");
+const dinoBtn = document.getElementById("dinoBtn");
+const allPetsBtn = document.getElementById("allPetsBtn");
+
+catBtn.addEventListener("click", () => {
+    createCards(pets, "cat")
+});
+dogBtn.addEventListener("click", () => {
+  createCards(pets, "dog")
+});
+dinoBtn.addEventListener("click", () => {
+  createCards(pets, "dino")
+});
+allPetsBtn.addEventListener("click", () => {
+  createCards(pets, "all")
+});
+
+
 const printToDom = (divId, textToPrint) => {
     const selectedDiv = document.getElementById(divId);
-    selectedDiv.innerHTML += textToPrint;
+    selectedDiv.innerHTML = textToPrint;
 }
 
-const createCards = (pets) => {
-    let domString = "";
 
-pets.forEach((pet) => {
-        domString += `<div class="petCard">`;
-        domString +=    `<h1 class="petName">${pet.name}</h1>`;
-        domString +=    `<div class="petDescription">`;
-        domString +=        `<img class="petImage" src=${pet.imageUrl}>`;
-        domString +=        `<p class="petColor">${pet.color}</p>`;
-        domString +=        `<p class="petSkill">${pet.specialSkill}</p>`;
-        domString +=    `</div>`;
-        domString +=    `<div class="petType">`;
-            if(pet.type === "dog") {
-                domString += `<p class="dogType">${pet.type}</p>`;
-            } else if (pet.type === "cat") {
-                domString +=  `<p class="catType">${pet.type}</p>`;  
-            } else if(pet.type === "dino") {
-                domString +=  `<p class="dinoType">${pet.type}</p>`; 
-            }
-            domString += `</div>`;
-        domString += `</div>`;
-    })
+const createCards = (pets, type) => {
+  let domString = "";
+  console.log(type);
+  console.log("domString: ", domString)
+  pets.forEach((pet) => {
+    if(pet.type === type || type === "all") {
+      domString += `<div class="petCard">`;
+      domString +=    `<h1 class="petName">${pet.name}</h1>`;
+      domString +=    `<div class="petDescription">`;
+      domString +=        `<img class="petImage" src=${pet.imageUrl}>`;
+      domString +=        `<p class="petColor">${pet.color}</p>`;
+      domString +=        `<p class="petSkill">${pet.specialSkill}</p>`;
+      domString +=    `</div>`;
+      domString +=    `<div class="petType">`;
+          if(pet.type === "dog") {
+              domString += `<p class="dogType">${pet.type}</p>`;
+          } else if (pet.type === "cat") {
+              domString +=  `<p class="catType">${pet.type}</p>`;  
+          } else if(pet.type === "dino") {
+              domString +=  `<p class="dinoType">${pet.type}</p>`; 
+          }
+          domString += `</div>`;
+      domString += `</div>`;
+     }
+  })
+   
     printToDom("petCardDiv", domString);
 }
 
 
+
+
 const init = () => {
-    createCards(pets);
+    createCards(pets, "all");
   };
 
 init();
