@@ -4,16 +4,16 @@
 ##### A page with three categories of animals shown that you can filter thru with the touch of a corresponding button or you can unfilter completely to view all animals with an All Pets button
 
 Here is the loadscreen:
-![Homepage](./assets/screenshots.homepage.png "Homepage")
+![Homepage](./assets/screenshots/homepage.png "Homepage")
 
 Here is it sorted by cats only:
-![Cats Only](./assets/screenshots.cats_only.png "Cats Only")
+![Cats Only](./assets/screenshots/cats_only.png "Cats Only")
 
 Here it is sorted by dogs only:
-![Dogs Only](./assets/screenshots.dogs_only.png "Dogs Only")
+![Dogs Only](./assets/screenshots/dogs_only.png "Dogs Only")
 
 Here it is sorted by dinos only:
-![Dinos Only](./assets/screenshots.dinos_only.png "Dinos Only")
+![Dinos Only](./assets/screenshots/dinos_only.png "Dinos Only")
 
 ### Tech Used:
 * HTML5
